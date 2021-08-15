@@ -8,7 +8,7 @@
         <SpaRoot>ClientApp\</SpaRoot>
         <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
         <UserSecretsId>6f38b567-0fdd-448c-a145-20e8476c4a24</UserSecretsId>
-        <RootNamespace>PersonalInfo.Spa.Personalnfo</RootNamespace>
+        <RootNamespace>PersonalInfo.Spa.PersonalInfo</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

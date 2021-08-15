@@ -2,12 +2,11 @@ version: "3.9"
 services:
   personalinfo-spa-client:
     container_name: personalinfo-spa-client
+    stdin_open: true
+    tty: true
     build:
       context: ./PersonalInfo.Spa.PersonalInfo
       dockerfile: Dockerfile.local
-    volumes:
-      - "./Client/adventure-works-client:/app"
-      - "/app/node_modules"
     ports:
       - "7001:8080"
     environment:
