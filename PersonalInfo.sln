@@ -16,6 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Spa", "5.Spa", "{0F7ACBD6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalInfo.Spa.PersonalInfo", "PersonalInfo.Spa.PersonalInfo\PersonalInfo.Spa.PersonalInfo.csproj", "{AD585D34-7685-4D80-A06D-5B502D5026C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Infrastructure", "0.Infrastructure", "{D5E6FA5A-E1B8-457C-AFCD-B64165E8AFC4}"
+ProjectSection(SolutionItems) = preProject
+	docker-compose.local.yml = docker-compose.local.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

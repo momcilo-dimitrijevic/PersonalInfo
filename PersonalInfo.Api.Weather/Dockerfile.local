@@ -1,0 +1,11 @@
+# syntax=docker/dockerfile:1
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
+WORKDIR /app
+
+FROM build-env AS build
+COPY . ./
+RUN dotnet restore
+RUN dotnet publish -c Debug -o out
+
+WORKDIR /app/out
+ENTRYPOINT ["dotnet", "PersonalInfo.Api.Weather.dll"]

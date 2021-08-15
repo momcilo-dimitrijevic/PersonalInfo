@@ -1,0 +1,18 @@
+# syntax=docker/dockerfile:1
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
+
+RUN apt-get update -yq \
+    && apt-get install curl gnupg -yq \
+    && curl -sL https://deb.nodesource.com/setup_14.x | bash \
+    && apt-get install nodejs -yq
+
+WORKDIR /app
+
+
+FROM build-env AS build
+COPY . ./
+RUN dotnet restore
+RUN dotnet publish -c Debug -o out
+
+WORKDIR /app/out
+ENTRYPOINT ["dotnet", "PersonalInfo.Spa.PersonalInfo.dll"]
